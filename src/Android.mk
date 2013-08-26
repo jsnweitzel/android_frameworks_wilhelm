@@ -21,7 +21,7 @@ include $(CLEAR_VARS)
 LOCAL_C_INCLUDES:= \
         $(call include-path-for, wilhelm)
 
-LOCAL_CFLAGS += -Wno-override-init
+LOCAL_CFLAGS += -Wno-override-init 
 # -Wno-missing-field-initializers
 # optional, see comments in MPH_to.c: -DUSE_DESIGNATED_INITIALIZERS -S
 # and also see ../tools/mphgen/Makefile
@@ -168,7 +168,7 @@ LOCAL_C_INCLUDES:=                                                  \
 # __pthread_gettid
 LOCAL_C_INCLUDES += bionic/libc/private
 
-LOCAL_CFLAGS += -x c++ -Wno-multichar -Wno-invalid-offsetof
+LOCAL_CFLAGS += -x c++ -Wno-multichar -Wno-invalid-offsetof -fno-strict-aliasing
 
 LOCAL_STATIC_LIBRARIES += \
         libopensles_helper        \
